@@ -1,24 +1,7 @@
 <!DOCTYPE html>
 
 <script>
-  /*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -54,7 +37,7 @@ var app = {
         if (window.plugin.CanvasCamera) {
           window.plugin.CanvasCamera.initialize({
                 fullsize: window.document.getElementById('fullsize'),
-                thumbnail: window.document.getElementById('thumbnail')
+
           });
         }
     },
@@ -73,7 +56,7 @@ var app = {
               use: 'file',
               fps: 30,
               flashMode: this.flash,
-              hasThumbnail: true,
+              hasThumbnail: false,
               thumbnailRatio: 1/6,
               cameraFacing: this.position
           };
@@ -113,24 +96,6 @@ app.initialize();
     
 </script>
 
-
-
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-    http://www.apache.org/licenses/LICENSE-2.0
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
   <head>
       <!--
@@ -153,7 +118,7 @@ app.initialize();
 <div class="app">
     <div id="deviceready">
         <canvas class="raster" id="fullsize"></canvas>
-        <canvas class="raster" id="thumbnail"></canvas>
+
         <div class="actions">
             <div class="action play" id="play">Play</div>
             <div class="action switch" id="switch">Switch</div>
