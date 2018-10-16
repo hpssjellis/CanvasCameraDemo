@@ -49,9 +49,7 @@ var app = {
         document.getElementById('switch').addEventListener('click', (function() {
             this.onSwitch();
         }).bind(this), false);
-        document.getElementById('torch').addEventListener('click', (function() {
-            this.onTorch();
-        }).bind(this), false);
+
 
         if (window.plugin.CanvasCamera) {
           window.plugin.CanvasCamera.initialize({
@@ -87,17 +85,6 @@ var app = {
         }
     },
     flash: false,
-    onTorch: function() {
-        console.log('torch');
-        if (window.plugin.CanvasCamera) {
-            this.flash = (this.flash) ? false : true;
-            window.plugin.CanvasCamera.flashMode(this.flash, function(error) {
-              console.log('[CanvasCamera flashMode]', 'error', error);
-            }, function(data) {
-              console.log('[CanvasCamera flashMode]', 'data', data);
-            });
-        }
-    },
     position: 'back',
     onSwitch: function() {
         console.log('switch');
@@ -171,7 +158,7 @@ app.initialize();
             <div class="action play" id="play">Play</div>
             <div class="action switch" id="switch">Switch</div>
             <div class="action stop" id="stop">Stop</div>
-            <div class="action torch" id="torch">Torch</div>
+
         </div>
     </div>
 </div>
