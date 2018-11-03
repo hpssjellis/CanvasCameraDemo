@@ -17,6 +17,12 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        
+   
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+
+  <!--  <preference name="AndroidPersistentFileLocation" value="Compatibility" />     -->
+        
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -26,6 +32,8 @@
     
     <plugin name="cordova-plugin-inappbrowser" spec="~3.0.0" />   
     <plugin name="cordova-plugin-file" spec="~6.0.1" />   
+    
+    
     
     <plugin name="com.virtuoworks.cordova-plugin-canvascamera" spec="https://github.com/VirtuoWorks/CanvasCameraPlugin.git" />
     <engine name="android" spec="~7.0.0" />
